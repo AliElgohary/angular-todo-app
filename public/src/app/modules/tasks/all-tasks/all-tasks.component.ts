@@ -16,7 +16,7 @@ export class AllTasksComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'task', 'completed', 'actions'];
   dataSource: Todo[] = [];
-  // Define the taskForm property
+  
   taskForm: {
     task: string;
   } = {
@@ -34,15 +34,15 @@ export class AllTasksComponent implements OnInit {
         });
     });
   }
-  // Function to add a new task
-  // Function to add a new task
+  
+  
   addTask(task: string): void {
     const username = this.activatedRoute.snapshot.queryParams['username'];
     const password = this.activatedRoute.snapshot.queryParams['password'];
 
     this.todoService.postTodo(task, username, password).subscribe(() => {
       this.reloadTaskList();
-      this.taskForm.task = ''; // Clear the input field
+      this.taskForm.task = '';
     });
   }
 

@@ -11,14 +11,14 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   login(username: string, password: string): Observable<any> {
-    const url = `${this.apiUrl}/login`; // Replace with your login endpoint URL
+    const url = `${this.apiUrl}/login`; 
     
-    // Make a login POST request and return the response
+    
     return this.http.post(url, { username, password });
   }
 
   logout(): void {
-    // Remove the token from local storage
+
     localStorage.removeItem('token');
   }
 
@@ -31,6 +31,6 @@ export class AuthService {
   }
 
   get isUserLogged(): boolean {
-    return !!localStorage.getItem('token'); // Check if the token exists in local storage
+    return !!localStorage.getItem('token'); 
   }
 }

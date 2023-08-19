@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: 'tasks',
     loadChildren: () => import('./modules/tasks/tasks.module').then(m => m.TasksModule),
-    canActivate: [AuthGuardService] // Add the canActivate property here
+    canActivate: [AuthGuardService] 
   },
   {
     path: 'login',
