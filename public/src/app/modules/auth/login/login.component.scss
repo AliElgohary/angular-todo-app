@@ -1,0 +1,23 @@
+.signInForm {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center;
+    align-items: center;
+    height: 60vh; 
+  }
+  
+  mat-form-field,
+  mat-select,
+  input[type="password"],
+  button[type="submit"] {
+    width: 100%; 
+    margin: 5px 0; 
+  }
+  
+  .submitBut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  

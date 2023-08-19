@@ -1,0 +1,24 @@
+<mat-card class="signInForm">
+    <mat-card-title><h1>Login to your account</h1></mat-card-title>
+  
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <mat-form-field>
+          <mat-label>User</mat-label>
+          <mat-select formControlName="name">
+            <mat-option *ngFor="let user of users" [value]="user.username">{{ user.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <span class="spacer-20"></span>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" />
+        </mat-form-field>
+        <span class="spacer-20"></span>
+        <div class="submitBut">
+        <button mat-raised-button color="primary" type="submit">Sign in</button>
+      </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
